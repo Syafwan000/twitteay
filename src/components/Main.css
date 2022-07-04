@@ -1,0 +1,126 @@
+/* Nav */
+
+.ty-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 25px;
+    padding: 0 50px !important;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.ty-navbrand {
+    display: flex;
+    align-items: center;
+}
+
+.ty-navbrand img {
+    width: 50px;
+}
+
+.ty-navbrand h2 {
+    margin: 0;
+    margin-left: 15px;
+    cursor: default;
+}
+
+.ty-navlist {
+    font-size: 16px;
+}
+
+.ty-navlist #ty-btn-github {
+    text-decoration: none;
+    margin-left: 15px;
+    background-color: #2b2d2f;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: .5rem;
+}
+
+.ty-navlist #ty-btn-support {
+    text-decoration: none;
+    margin-left: 15px;
+    background-color: #1D9BF0;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: .5rem;
+}
+
+.ty-navlist #ty-btn-create {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #1D9BF0;
+    padding: 6px 12px;
+    border: 2px solid #1D9BF0;
+    border-radius: .5rem;
+}
+
+.ty-navlist #ty-btn-github:hover {
+    background-color: #000;
+    transition: 0.3s;
+}
+
+.ty-navlist #ty-btn-support:hover {
+    background-color: #1289d8;
+    transition: 0.3s;
+}
+
+.ty-navlist #ty-btn-create:hover {
+    background-color: #1289d8;
+    border-color: #1289d8;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* End Nav */
+
+/* Main */
+
+.ty-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    margin: 30px 0 0 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.ty-main h1 {
+    width: 1200px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #2b2d2f;
+    cursor: default;
+}
+
+.ty-main p {
+    font-size: 24px;
+    color: rgb(90, 90, 90);
+    cursor: default;
+}
+
+.ty-main a {
+    text-decoration: none;
+    background-color: #1D9BF0;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: .5rem;
+}
+
+.ty-main a:hover {
+    background-color: #1289d8;
+    border-color: #1289d8;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* End Main */
