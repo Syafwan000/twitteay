@@ -1,0 +1,212 @@
+/* Nav Action */
+
+.ty-navlist-action {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 15px;
+    padding: 0 15px !important;
+    position: relative;
+}
+
+.ty-btn-back {
+    text-decoration: none;
+    background-color: #1D9BF0;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: .5rem;
+}
+
+.ty-btn-reset {
+    text-decoration: none;
+    background-color: #DC3545;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: .5rem;
+    border: none;
+}
+
+.ty-btn-download {
+    text-decoration: none;
+    margin-left: 15px;
+    background-color: #198754;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: .5rem;
+}
+
+.ty-btn-back:hover {
+    background-color: #1289d8;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.ty-btn-reset:hover {
+    background-color: #bb2837;
+    transition: 0.3s;
+}
+
+.ty-btn-download:hover {
+    background-color: #126c42;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* End Nav Action */
+
+/* Preview */
+
+.ty-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.ty-preview-wrapper {
+    width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.ty-preview-header {
+    display: flex;
+    align-items: center;
+}
+
+img.ty-photo-profile {
+    width: 60px;
+    height: 60px;
+}
+
+.ty-preview-header-username {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.ty-preview-header-username h2 {
+    margin: 0;
+}
+
+.ty-name-user {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ty-username-user {
+    text-transform: lowercase;
+    font-size: 18px;
+    color: #536471;
+}
+
+.ty-preview-body {
+    margin: 15px 0 0 0;
+}
+
+.ty-tweet {
+    font-size: 18px;
+}
+
+.ty-date-tweet {
+    color: #536471;
+    margin: 0 0 10px 0;
+}
+
+.ty-line {
+    height: .5px;
+    background-color: #536471;
+}
+
+.ty-footer-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.ty-footer-content p {
+    color: #536471;
+    margin: 10px 0;
+}
+
+span.ty-bold-text {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.ty-likes {
+    padding-left: 15px;
+}
+
+.ty-action-icon {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0 0 0;
+}
+
+.ty-gray {
+    color: #536471;
+    font-size: 18px;
+}
+
+/* End Preview */
+
+/* Edit */
+
+.ty-edit {
+    background-color: #fff;
+    border-radius: .5rem !important;
+    padding: 12px;
+    padding-top: 18px;
+    height: 400px;
+}
+
+.ty-edit-title {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    margin: 0 0 18px 0;
+}
+
+.ty-title-line {
+    height: 3px;
+    background-color: #000;
+    border-radius: .5rem;
+    width: 30px;
+    margin: -8px auto;
+    margin-bottom: 12px;
+}
+
+.ty-edit-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.ty-label-input {
+    font-family: 'Outfit', sans-serif;
+}
+
+textarea.form-control {
+    resize: none;
+    height: 100px;
+}
+
+input[type="text"],
+input[type="file"],
+textarea.form-control {
+    font-family: 'Outfit', sans-serif;
+    border: 1px solid rgb(181, 181, 181);
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea.form-control:focus {
+    font-family: 'Outfit', sans-serif;
+    border: 1px solid rgb(181, 181, 181);
+}
+
+.ty-left-edit, .ty-middle-edit, .ty-right-edit {
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* End Edit */

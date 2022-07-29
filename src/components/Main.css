@@ -43,15 +43,6 @@
     border-radius: .5rem;
 }
 
-.ty-navlist #ty-btn-support {
-    text-decoration: none;
-    margin-left: 15px;
-    background-color: #1D9BF0;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: .5rem;
-}
-
 .ty-navlist #ty-btn-create {
     text-decoration: none;
     margin-left: 15px;
@@ -63,11 +54,6 @@
 
 .ty-navlist #ty-btn-github:hover {
     background-color: #000;
-    transition: 0.3s;
-}
-
-.ty-navlist #ty-btn-support:hover {
-    background-color: #1289d8;
     transition: 0.3s;
 }
 
