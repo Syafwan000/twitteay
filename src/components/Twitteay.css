@@ -67,7 +67,6 @@
 .ty-preview-wrapper {
     width: 500px;
     padding: 20px;
-    background-color: #fff;
     font-family: 'Lato', sans-serif;
 }
 
@@ -88,17 +87,24 @@ img.ty-photo-profile {
 
 .ty-preview-header-username h2 {
     margin: 0;
+    cursor: default;
 }
 
 .ty-name-user {
     font-size: 20px;
     font-weight: bold;
+    cursor: default;
+}
+
+.ty-verified-icon {
+    color: #1D9BF0;
+    font-size: 19px;
 }
 
 .ty-username-user {
     text-transform: lowercase;
     font-size: 18px;
-    color: #536471;
+    color: #818E9B;
 }
 
 .ty-preview-body {
@@ -107,16 +113,18 @@ img.ty-photo-profile {
 
 .ty-tweet {
     font-size: 18px;
+    cursor: default;
 }
 
 .ty-date-tweet {
-    color: #536471;
+    color: #818E9B;
     margin: 0 0 10px 0;
+    cursor: default;
 }
 
 .ty-line {
     height: .5px;
-    background-color: #536471;
+    background-color: #818E9B;
 }
 
 .ty-footer-content {
@@ -125,8 +133,9 @@ img.ty-photo-profile {
 }
 
 .ty-footer-content p {
-    color: #536471;
+    color: #818E9B;
     margin: 10px 0;
+    cursor: default;
 }
 
 span.ty-bold-text {
@@ -145,7 +154,12 @@ span.ty-bold-text {
 }
 
 .ty-gray {
-    color: #536471;
+    color: #818E9B;
+    font-size: 18px;
+}
+
+.ty-liked {
+    color: #F91880;
     font-size: 18px;
 }
 
@@ -155,7 +169,6 @@ span.ty-bold-text {
 
 .ty-edit {
     background-color: #fff;
-    border-radius: .5rem !important;
     padding: 12px;
     padding-top: 18px;
     height: 400px;
@@ -165,6 +178,7 @@ span.ty-bold-text {
     text-align: center;
     font-family: 'Outfit', sans-serif;
     margin: 0 0 18px 0;
+    cursor: default;
 }
 
 .ty-title-line {
@@ -192,6 +206,9 @@ textarea.form-control {
 
 input[type="text"],
 input[type="file"],
+input[type="time"],
+input[type="date"],
+select.form-select,
 textarea.form-control {
     font-family: 'Outfit', sans-serif;
     border: 1px solid rgb(181, 181, 181);
@@ -199,6 +216,9 @@ textarea.form-control {
 
 input[type="text"]:focus,
 input[type="file"]:focus,
+input[type="time"]:focus,
+input[type="date"]:focus,
+select.form-select:focus,
 textarea.form-control:focus {
     font-family: 'Outfit', sans-serif;
     border: 1px solid rgb(181, 181, 181);
@@ -209,4 +229,128 @@ textarea.form-control:focus {
     padding: 0 20px;
 }
 
+.ty-date-input {
+    display: flex;
+}
+
+.ty-date-input .mb-2 {
+    width: 100%;
+}
+
+.ty-date-input .ty-time {
+    margin-right: 10px;
+}
+
+.btn-info {
+    font-family: 'Outfit', sans-serif;
+    background-color: #1D9BF0 !important;
+    border: 1px solid #1D9BF0 !important;
+    color: #fff !important;
+}
+
+.btn-outline-info {
+    font-family: 'Outfit', sans-serif;
+    border: 1px solid #1D9BF0 !important;
+    color: #1D9BF0 !important;
+}
+
+.btn-outline-info:hover {
+    background-color: #1D9BF0 !important;
+    color: #fff !important;
+}
+
+.btn-outline-info:focus {
+    background-color: #1D9BF0 !important;
+    color: #fff !important;
+}
+
+.btn-check:checked+.btn-outline-info {
+    font-family: 'Outfit', sans-serif;
+    background-color: #1D9BF0 !important;
+    border: 1px solid #1D9BF0 !important;
+    color: #fff !important;
+}
+
+.btn-outline-info.liked {
+    color: #F91880 !important;
+    border: 1px solid #F91880 !important;
+}
+
+.btn-outline-info.liked:hover {
+    background-color: #F91880 !important;
+    color: #fff !important;
+}
+
+.btn-outline-info.liked:focus {
+    background-color: #F91880 !important;
+    color: #fff !important;
+}
+
+.btn-check:checked+.btn-outline-info.liked {
+    background-color: #F91880 !important;
+    border: 1px solid #F91880 !important;
+    color: #fff !important;
+}
+
+.ty-developer {
+    font-size: 12px;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    margin: 26px 0 0 0;
+    cursor: default;
+}
+
 /* End Edit */
+
+/* Light Theme */
+
+.ty-light-theme {
+    background-color: #fff;
+}
+
+/* End Light Theme */
+/* Dim Theme */
+
+.ty-dim-theme {
+    background-color: #15202B;
+    color: #fff;
+}
+
+.ty-bold-text.ty-dim-theme {
+    color: #fff !important;
+}
+
+/* End Dim Theme */
+/* Dark Theme */
+
+.ty-dark-theme {
+    background-color: #000;
+    color: #fff;
+}
+
+.ty-bold-text.ty-dark-theme {
+    color: #fff !important;
+}
+
+/* End Dark Theme */
+/* Pink Theme */
+
+.ty-pink-theme {
+    background-color: #FFC4E1;
+}
+
+/* End Pink Theme */
+/* Lime Theme */
+
+.ty-lime-theme {
+    background-color: #CDF2CA;
+}
+
+/* End Lime Theme */
+/* Mocca Theme */
+
+.ty-mocca-theme {
+    background-color: #FFE6BC;
+}
+
+/* End Mocca Theme */
