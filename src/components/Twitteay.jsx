@@ -87,7 +87,11 @@ export default function Twitteay() {
                 <div className={"ty-preview-wrapper shadow-sm capture " + theme}>
                     <div className="ty-preview-header">
                         {photo ? (
-                            <img className="ty-photo-profile rounded-circle" src={URL.createObjectURL(photo)} alt="Photo" />
+                            <>
+                                <div className="rounded-circle">
+                                    <img className="ty-photo-profile rounded-circle" src={URL.createObjectURL(photo)} alt="Photo" />
+                                </div>
+                            </>
                         ) : (
                             <img className="ty-photo-profile rounded-circle" src={ProfileIcon} alt="Photo" />
                         )}

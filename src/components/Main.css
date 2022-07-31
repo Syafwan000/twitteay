@@ -163,4 +163,8 @@ a.dropdown-item a.d-block:active {
     .ty-main a {
         font-size: 18px;
     }
+
+    .ty-nav-wrapper {
+        margin: 0 20px;
+    }
 }

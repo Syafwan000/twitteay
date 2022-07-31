@@ -79,6 +79,7 @@
 img.ty-photo-profile {
     width: 60px;
     height: 60px;
+    object-fit: cover;
 }
 
 .ty-preview-header-username {
