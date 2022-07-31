@@ -61,7 +61,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 50px 0;
+    padding: 50px 10px !important;
+    width: 100%;
 }
 
 .ty-preview-wrapper {
@@ -171,7 +172,6 @@ span.ty-bold-text {
     background-color: #fff;
     padding: 12px;
     padding-top: 18px;
-    height: 400px;
 }
 
 .ty-edit-title {
@@ -354,3 +354,19 @@ textarea.form-control:focus {
 }
 
 /* End Mocca Theme */
+
+@media (max-width: 992px) {
+    .ty-edit-content {
+        flex-direction: column;
+    }
+
+    .ty-btn-download {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ty-preview-wrapper {
+        width: 100%;
+    }
+}

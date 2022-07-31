@@ -30,6 +30,20 @@
     cursor: default;
 }
 
+.ty-nav-dropdown {
+    display: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+a.dropdown-item a.d-block {
+    text-decoration: none;
+    color: #000;
+}
+
+a.dropdown-item a.d-block:active {
+    color: #fff;
+}
+
 .ty-navlist {
     font-size: 16px;
 }
@@ -80,7 +94,6 @@
 }
 
 .ty-main h1 {
-    width: 1200px;
     font-size: 60px;
     font-weight: 700;
     color: #2b2d2f;
@@ -109,4 +122,45 @@
     transition: 0.3s;
 }
 
+.ty-dev {
+    margin-top: 4px;
+    font-size: 16px !important;
+}
+
 /* End Main */
+
+@media (max-width: 992px) {
+    .ty-main h1 {
+        font-size: 40px;
+    }
+
+    .ty-main p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ty-nav {
+        padding: 0 20px !important;
+    }
+
+    .ty-navbrand h2 {
+        font-size: 24px;
+    }
+
+    .ty-nav-dropdown {
+        display: block;
+    }
+
+    .ty-navlist {
+        display: none;
+    }
+
+    .ty-main h1 {
+        font-size: 32px;
+    }
+
+    .ty-main a {
+        font-size: 18px;
+    }
+}

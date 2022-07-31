@@ -17,7 +17,7 @@ export default function Twitteay() {
     const [username, setUsername] = useState('capwannnn');
     const [theme, setTheme] = useState('ty-light-theme');
     const [source, setSource] = useState('Made with Twitteay');
-    const [tweet, setTweet] = useState('hii!!! thank you for visiting "Twitteay"');
+    const [tweet, setTweet] = useState('hii!!! thank you for visiting "Twitteay" :3');
     const [liked, setLiked] = useState(false);
     const [time, setTime] = useState('00:00');
     const [date, setDate] = useState('2004-12-25');
@@ -38,14 +38,16 @@ export default function Twitteay() {
 
     (name == "") && setName('Syafwan');
     (username == "") && setUsername('capwannnn');
-    (tweet == "") && setTweet('hii!!! thank you for visiting "Twitteay"');
+    (tweet == "") && setTweet('hii!!! thank you for visiting "Twitteay" :3');
     (retweets == "") && setRetweets('1,000');
     (likes == "") && setLikes('1,000');
 
     const captureTwitteay =  useCallback(async () => {
-        const tweet = await html2canvas(document.querySelector('.capture'));
+        const tweet = await html2canvas(document.querySelector('.capture'), {
+            windowWidth: 500
+        });
         const dataURL = tweet.toDataURL('image/png');
-        download(dataURL, 'download.png', 'image/png');
+        download(dataURL, 'Twitteay.png', 'image/png');
     }, []);
 
     const resetAll = () => {
@@ -55,7 +57,7 @@ export default function Twitteay() {
         setUsername('capwannnn');
         setTheme('ty-light-theme');
         setSource('Made with Twitteay');
-        setTweet('hii!!! thank you for visiting "Twitteay"');
+        setTweet('hii!!! thank you for visiting "Twitteay" :3');
         setLiked(false);
         setTime('00:00');
         setDate('2004-12-25');
@@ -81,7 +83,7 @@ export default function Twitteay() {
                     <a href="#" className="ty-btn-download" onClick={captureTwitteay}>Download</a>
                 </div>
             </Container>
-            <Container className="ty-preview">
+            <Container fluid className="ty-preview">
                 <div className={"ty-preview-wrapper shadow-sm capture " + theme}>
                     <div className="ty-preview-header">
                         {photo ? (
@@ -202,7 +204,7 @@ export default function Twitteay() {
                         </Form.Group>
                     </div>
                 </div>
-                <p className="ty-developer">Made with 💖 by Muhammad Syafwan Ardiansyah</p>
+                <p className="ty-developer">Created with 💖 by Muhammad Syafwan Ardiansyah</p>
             </Container>
         </>
     )
