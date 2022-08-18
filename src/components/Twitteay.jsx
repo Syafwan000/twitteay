@@ -41,6 +41,8 @@ export default function Twitteay() {
     (tweet == "") && setTweet('hii!!! thank you for visiting "Twitteay" :3');
     (retweets == "") && setRetweets('1,000');
     (likes == "") && setLikes('1,000');
+    (time == "" && setTime('00:00'));
+    (date == "" && setDate('2004-12-25'));
 
     const captureTwitteay =  useCallback(async () => {
         const tweet = await html2canvas(document.querySelector('.capture'), {
