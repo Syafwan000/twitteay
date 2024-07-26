@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "filepond": "^4.31.1",
+    "filepond-plugin-file-validate-type": "^1.2.9",
+    "filepond-plugin-image-preview": "^4.6.12",
     "framer-motion": "^11.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-filepond": "^7.1.2",
     "react-slick": "^0.30.2",
     "react-tooltip": "^5.27.1",
     "slick-carousel": "^1.8.1",

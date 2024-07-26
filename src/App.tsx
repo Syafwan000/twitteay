@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Generator from '@pages/Generator'
 import Layout from '@pages/Layout'
 import About from '@pages/About'
 import Home from '@pages/Home'
@@ -11,6 +12,7 @@ const App = () => {
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Route>
+        <Route path="/create" element={<Generator />} />
       </Routes>
     </BrowserRouter>
   )
