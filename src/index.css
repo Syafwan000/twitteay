@@ -78,6 +78,10 @@
   html {
     @apply font-inter;
   }
+
+  img {
+    @apply inline-block;
+  }
 }
 
 @layer components {}

@@ -24,7 +24,7 @@ const Toolbar = () => {
                 <Icon className="text-4xl" icon="fluent:image-24-filled" />
               </Button>
             </div>
-            <Button tooltipID="back-to-home" tooltipContent="Return to home" tooltipPlace="right" variant="link" to="/" className="w-12 h-12 bg-black flex justify-center items-center p-2.5">
+            <Button tooltipID="back-to-home" tooltipContent="Return to home" tooltipPlace="right" variant="link" to="/" className="w-12 h-12 bg-black flex justify-center items-center p-2.5 z-50">
               <Icon className="text-4xl text-white" icon="fluent:home-24-filled" />
             </Button>
           </div>

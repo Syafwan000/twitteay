@@ -1,11 +1,11 @@
-type TextfieldProps = {
+type InputfieldProps = {
   name: string,
   type: string,
   placeholder?: string,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Textfield = (props: TextfieldProps) => {
+const Inputfield = (props: InputfieldProps) => {
   return (
     <div className="space-y-1">
       <label className="font-semibold" htmlFor={props.name}>{props.name}</label>
@@ -14,4 +14,4 @@ const Textfield = (props: TextfieldProps) => {
   )
 }
 
-export default Textfield
+export default Inputfield

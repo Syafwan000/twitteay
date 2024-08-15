@@ -24,6 +24,7 @@ const Filepond = (props: FilepondProps) => {
         id={props.name}
         onupdatefiles={previewImage}
         onremovefile={() => props.stateHandler && props.stateHandler('')}
+        onerror={() => props.stateHandler && props.stateHandler('')}
         acceptedFileTypes={['image/*']}
         labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>' />
     </div>

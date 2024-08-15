@@ -22,7 +22,7 @@ const Layout = () => {
 
   return (
     <>
-      <nav className="max-w-screen-lg mx-auto">
+      <nav className="max-w-screen-lg mx-auto px-6 xl:px-0">
         <div className="flex justify-between items-center py-6">
           <div className="w-10 h-10 bg-black rounded-full text-white font-bold flex justify-center items-center">T</div>
           <div className="flex gap-3">
@@ -36,10 +36,10 @@ const Layout = () => {
         </div>
       </nav>
       <Outlet />
-      <Button variant="button" onClick={scrollToTop} className={`${scroll > 50 ? 'bottom-10' : '-bottom-24'} fixed flex justify-center items-center right-8 bg-black w-10 h-10`}>
+      <Button variant="button" onClick={scrollToTop} className={`${scroll > 50 ? 'bottom-14' : '-bottom-24'} fixed flex justify-center items-center right-6 bg-black w-10 h-10 z-50`}>
         <Icon className="text-2xl text-white" icon="fluent:arrow-up-24-filled" />
       </Button>
-      <footer className="max-w-screen-lg mx-auto py-6">
+      <footer className="max-w-screen-lg mx-auto py-6 px-6 xl:px-0">
         <p className="text-center text-sm text-black/75">Crafted By Muhammad Syafwan Ardiansyah</p>
       </footer>
     </>
