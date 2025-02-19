@@ -1,15 +1,16 @@
 import { PropsWithChildren } from "react"
+import { Icon } from '@iconify/react'
 
 type FeatureProps = {
   title: string,
-  icon: JSX.Element
+  icon: string
 }
 
-const Feature = (props: FeatureProps & PropsWithChildren) => {
+const FeatureDisplay = (props: FeatureProps & PropsWithChildren) => {
   return (
     <div className="flex flex-col gap-5">
       <div className="inline-flex justify-center items-center w-12 h-12 p-3 bg-black rounded-2xl">
-        {props.icon}
+        <Icon className="text-4xl text-white" icon={props.icon} />
       </div>
       <div className="space-y-1">
         <h3 className="font-semibold text-lg">{props.title}</h3>
@@ -19,4 +20,4 @@ const Feature = (props: FeatureProps & PropsWithChildren) => {
   )
 }
 
-export default Feature
+export default FeatureDisplay

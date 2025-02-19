@@ -1,11 +1,11 @@
-import moment from 'moment'
 import { create } from 'zustand'
 
-type Store = {
+type State = {
   profileImage: string | null,
   name: string | null,
   username: string | null,
   date: string | null,
+  additionalYear: boolean,
   textContent: string | null,
   tweetWidth: 'md' | 'lg' | 'xl',
   profileShape: 'square' | 'rounded' | 'circle',
@@ -24,6 +24,7 @@ type Action = {
   setName: (name: string) => void,
   setUsername: (username: string) => void,
   setDate: (date: string) => void,
+  setAdditionalYear: (additionalYear: boolean) => void,
   setTextContent: (textContent: string) => void,
   setTweetWidth: (tweetWidth: 'md' | 'lg' | 'xl') => void,
   setProfileShape: (profileShape: 'square' | 'rounded' | 'circle') => void,
@@ -35,40 +36,34 @@ type Action = {
   setRepost: (repost: string | number) => void,
   setLike: (like: string | number) => void,
   setView: (view: string | number) => void,
+  resetState: () => void
 }
 
-const dateHandler = (date: string) => {
-  return moment(date).format('MMM D, YYYY')
-}
-
-const nFormatter = (num: number, digits: number) => {
-  const lookup = [
-    { value: 1, symbol: "" },
-    { value: 1e3, symbol: "K" },
-    { value: 1e6, symbol: "M" },
-    { value: 1e9, symbol: "B" },
-    { value: 1e12, symbol: "T" },
-    { value: 1e15, symbol: "Qd" }
-  ];
-
-  const regexp = /\.0+$|(?<=\.[0-9]*[1-9])0+$/;
-  const item = lookup.slice().reverse().find(item => num >= item.value);
-  return item ? (num / item.value).toFixed(digits).replace(regexp, "").concat(item.symbol) : null;
-}
-
-const toInt = (num: string | number) => {
-  if (typeof num === 'string') {
-    return parseInt(num)
-  } else {
-    return num
-  }
-}
-
-const useContentStore = create<Store & Action>((set) => ({
+const initialState: State = {
   profileImage: null,
   name: null,
   username: null,
   date: null,
+  additionalYear: false,
+  textContent: null,
+  tweetWidth: 'md',
+  profileShape: 'circle',
+  verified: null,
+  liked: false,
+  reposted: false,
+  viewed: false,
+  colorMode: 'light',
+  repost: null,
+  like: null,
+  view: null,
+}
+
+const useContentStore = create<State & Action>((set) => ({
+  profileImage: null,
+  name: null,
+  username: null,
+  date: null,
+  additionalYear: false,
   textContent: null,
   tweetWidth: 'md',
   profileShape: 'circle',
@@ -83,7 +78,8 @@ const useContentStore = create<Store & Action>((set) => ({
   setProfileImage: (profileImage) => set({ profileImage }),
   setName: (name) => set({ name }),
   setUsername: (username) => set({ username }),
-  setDate: (date) => set({ date: dateHandler(date) }),
+  setDate: (date) => set({ date }),
+  setAdditionalYear: (additionalYear) => set({ additionalYear }),
   setTextContent: (textContent) => set({ textContent }),
   setTweetWidth: (tweetWidth) => set({ tweetWidth }),
   setProfileShape: (profileShape) => set({ profileShape }),
@@ -92,9 +88,10 @@ const useContentStore = create<Store & Action>((set) => ({
   setReposted: (reposted) => set({ reposted }),
   setViewed: (viewed) => set({ viewed }),
   setColorMode: (colorMode) => set({ colorMode }),
-  setRepost: (repost) => set({ repost: nFormatter(toInt(repost), 1) }),
-  setLike: (like) => set({ like: nFormatter(toInt(like), 1) }),
-  setView: (view) => set({ view: nFormatter(toInt(view), 1) }),
+  setRepost: (repost) => set({ repost }),
+  setLike: (like) => set({ like }),
+  setView: (view) => set({ view }),
+  resetState: () => set(initialState)
 }))
 
 export default useContentStore

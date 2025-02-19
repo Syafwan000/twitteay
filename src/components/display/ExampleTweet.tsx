@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react'
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react'
 
 type ExampleTweetProps = {
   profileImage: string,
@@ -16,9 +16,9 @@ type ExampleTweetProps = {
 
 const ExampleTweet = (props: ExampleTweetProps & PropsWithChildren) => {
   return (
-    <div className="max-w-lg flex gap-3 text-sm sm:text-base">
+    <div className="max-w-lg flex gap-3 text-sm h-[150px] min-[400px]:h-[120px] sm:text-base">
       <div>
-        <img className="rounded-full aspect-square max-w-14 object-cover object-center" src={props.profileImage} alt="Example Tweet Profile" />
+        <img className="rounded-full aspect-square max-w-10 object-cover object-center min-[400px]:max-w-14" src={props.profileImage} alt="Example Tweet Profile" />
       </div>
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
@@ -34,19 +34,19 @@ const ExampleTweet = (props: ExampleTweetProps & PropsWithChildren) => {
           <p>{props.children}</p>
         </div>
         <div className="flex justify-between items-center text-black/60 py-2">
-          <div className="flex text-sm items-center justify-center gap-1">
+          <div className="flex text-xs items-center justify-center gap-1 min-[400px]:text-sm">
             <Icon className="text-sm sm:text-xl" icon="fluent:chat-empty-24-regular" />
             <p>{props.comment}</p>
           </div>
-          <div className="flex text-sm items-center justify-center gap-1">
+          <div className="flex text-xs items-center justify-center gap-1 min-[400px]:text-sm">
             <Icon className="text-sm sm:text-xl" icon="fluent:arrow-repeat-all-24-regular" />
             <p>{props.repost}</p>
           </div>
-          <div className={`flex text-sm items-center justify-center gap-1 ${props.liked == true && 'text-[#f91880]'}`}>
+          <div className={`flex text-xs items-center justify-center gap-1 min-[400px]:text-sm ${props.liked == true && 'text-[#f91880]'}`}>
             <Icon inline className="text-sm sm:text-xl" icon={props.liked == true ? 'fluent:heart-24-filled' : 'fluent:heart-24-regular'} />
             <p>{props.like}{props.liked}</p>
           </div>
-          <div className="flex text-sm items-center justify-center gap-1">
+          <div className="flex text-xs items-center justify-center gap-1 min-[400px]:text-sm">
             <Icon className="text-sm sm:text-xl" icon="fluent:data-histogram-24-regular" />
             <p>{props.view}</p>
           </div>

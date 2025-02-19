@@ -1,9 +1,9 @@
 const AdditionalContent = () => {
   return (
     <div>
-      <div className="bg-black/15 space-y-px p-3 rounded-xl">
+      <div className="bg-black/15 space-y-px p-6 rounded-xl">
         <h3 className="text-xl font-bold">Additional Content</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia!</p>
+        <p>Use this section to add supplementary elements that enhance your content</p>
       </div>
     </div>
   )

@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,7 +9,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'sans-serif']
+        'sans': ['Inter', ...defaultTheme.fontFamily.sans]
+      },
+      colors: {
+        twitteay: {
+          red: '#f91880',
+          green: '#00ba7c'
+        }
       }
     },
   },

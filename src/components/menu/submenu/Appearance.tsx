@@ -1,17 +1,19 @@
 import useContentStore from '@/stores/content-store'
-import Radio from '@components/Radio'
-import Checkbox from '@components/Checkbox'
+import Radio from '@/components/input/Radio'
+import Checkbox from '@/components/input/Checkbox'
 import { Icon } from '@iconify/react'
 
 const Appearance = () => {
-  const { setProfileShape, setVerified, setColorMode, setTweetWidth, 
-    setLiked, liked, setReposted, reposted, setViewed, viewed } = useContentStore()
+  const { 
+    setProfileShape, setVerified, setColorMode, setTweetWidth, 
+    setLiked, setReposted, setViewed 
+  } = useContentStore()
 
   return (
     <div className="flex flex-col gap-5 w-full h-full">
-      <div className="bg-black/15 space-y-px p-3 rounded-xl">
+      <div className="bg-black/15 space-y-px p-6 rounded-xl">
         <h3 className="text-xl font-bold">Appearance & Attributes</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia!</p>
+        <p>Customize the look and feel of your content here. This section includes options to adjust themes and others</p>
       </div>
       <div className="space-y-3 p-2 overflow-y-auto">
         <div className="space-y-1">
@@ -56,19 +58,19 @@ const Appearance = () => {
         </div>
         <div className="space-y-1">
           <label className="font-semibold">Reposted</label>
-          <Checkbox name="reposted" id="reposted" color="green" onClick={() => setReposted(!reposted)}>
-            Repost
+          <Checkbox name="reposted" id="reposted" color="green" onClick={(e) => setReposted((e.target as HTMLInputElement).checked)}>
+            Reposted
           </Checkbox>
         </div>
         <div className="space-y-1">
           <label className="font-semibold">Liked</label>
-          <Checkbox name="liked" id="liked" color="red" onClick={() => setLiked(!liked)}>
+          <Checkbox name="liked" id="liked" color="red" onClick={(e) => setLiked((e.target as HTMLInputElement).checked)}>
             Liked
           </Checkbox>
         </div>
         <div className="space-y-1">
           <label className="font-semibold">Viewed</label>
-          <Checkbox name="viewed" id="viewed" color="blue" onClick={() => setViewed(!viewed)}>
+          <Checkbox name="viewed" id="viewed" color="blue" onClick={(e) => setViewed((e.target as HTMLInputElement).checked)}>
             Viewed
           </Checkbox>
         </div>
