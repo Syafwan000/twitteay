@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+    <img src="https://github.com/Syafwan000/twitteay/blob/revamp/public/assets/favicon/android-chrome-192x192.png" alt="Twitteay Logo">
+</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Twitteay — Simple tool for creating fake tweets!
 
-## Expanding the ESLint configuration
+Twitteay is a simple tool for creating fake tweets. Customize text, usernames, and more for fun or creative purposes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Customizable
+- Responsive
+- Easy to Use
+- Live Preview
+- Downloadable
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Installation
+
+1. Clone the project
+
+    ```bash
+      git clone https://github.com/Syafwan000/twitteay
+    ```
+
+2. Go to the project directory
+
+    ```bash
+      cd twitteay
+    ```
+
+3. Install dependencies
+
+    ```bash
+      npm install
+    ```
+
+7. Start the server
+
+    ```bash
+      npm run dev
+    ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Syafwan000/twitteay/blob/revamp/LICENSE) file for details.
