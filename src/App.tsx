@@ -15,7 +15,7 @@ const App = () => {
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Route>
-        <Route path="/create" element={<Generator />} />
+        <Route path="/generate" element={<Generator />} />
       </Routes>
     </BrowserRouter>
   )

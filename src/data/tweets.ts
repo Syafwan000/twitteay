@@ -3,8 +3,8 @@ import { ExampleTweetType } from "@/types/tweet"
 export const exampleTweets: ExampleTweetType[] = [
   {
     profileImage: "/assets/images/avatar/1.png",
-    name: "Luna",
-    username: "luna",
+    name: "Litha",
+    username: "litha",
     date: "Dec 16",
     comment: 123,
     repost: 54,
@@ -16,8 +16,8 @@ export const exampleTweets: ExampleTweetType[] = [
   },
   {
     profileImage: "/assets/images/avatar/2.png",
-    name: "Mark",
-    username: "mark",
+    name: "Syafwan",
+    username: "syafwan",
     date: "Jul 3, 2021",
     comment: 453,
     repost: 12,
@@ -41,8 +41,8 @@ export const exampleTweets: ExampleTweetType[] = [
   },
   {
     profileImage: "/assets/images/avatar/4.png",
-    name: "Dave",
-    username: "dave",
+    name: "Diva",
+    username: "diva",
     date: "May 12",
     comment: '1.1K',
     repost: '2K',
@@ -53,8 +53,8 @@ export const exampleTweets: ExampleTweetType[] = [
   },
   {
     profileImage: "/assets/images/avatar/5.png",
-    name: "Alice",
-    username: "alice",
+    name: "Alya",
+    username: "alya",
     date: "Sep 21, 2022",
     comment: '2.3K',
     repost: 776,

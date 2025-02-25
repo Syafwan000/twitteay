@@ -4,22 +4,25 @@ import download from "downloadjs"
 import { Icon } from '@iconify/react'
 import { useCallback } from "react"
 import useContentStore from "@/stores/content-store"
+import useTweetWidth from "@/hooks/use-tweet-width"
 
 const Action = () => {
-  const { resetState } = useContentStore()
-
+  const { tweetWidth, resetState } = useContentStore()
+  
   const handleDownload = useCallback(async () => {
     const tweetElement = document.querySelector('#tweet')
     let fileName = 'twitteay-' + new Date().getTime() + '.png'
+    let width = useTweetWidth(tweetWidth)
 
     if (tweetElement) {
       const tweet = await html2canvas(tweetElement as HTMLElement, {
-        scale: 2
+        scale: 2,
+        windowWidth: width,
       })
       const dataURL = tweet.toDataURL('image/png')
       download(dataURL, fileName, 'image/png')
     }
-  }, [])
+  }, [tweetWidth])
 
   return (
     <div className="flex gap-3 absolute top-5 right-5">

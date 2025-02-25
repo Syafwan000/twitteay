@@ -14,10 +14,10 @@ const Generator = () =>  {
 
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-4">
+      <div className="col-span-12 order-2 lg:order-1 lg:col-span-5 2xl:col-span-4">
         <Toolbar />
       </div>
-      <div className="col-span-8 flex justify-center items-center w-full h-dvh p-5 relative">
+      <div className="col-span-12 flex justify-center items-center w-full pt-28 pb-10 relative order-1 lg:p-5 lg:h-dvh lg:order-2 lg:col-span-7 2xl:col-span-8">
         <Action />
         <div id="tweet" className={`transition-all duration-300 ease-in-out w-full flex gap-3 p-3 ${colorMode == 'dark' ? 'bg-black' : 'bg-white'} ${tweetWidth == 'md' && 'max-w-md'} ${tweetWidth == 'lg' && 'max-w-lg'} ${tweetWidth == 'xl' && 'max-w-xl'}`}>
           <div className="flex-shrink-0">

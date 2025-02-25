@@ -11,7 +11,7 @@ const Layout = () => {
   window.onscroll = () => setScroll(window.scrollY)
 
   return (
-    <main className="max-w-screen-lg mx-auto px-6 xl:px-0">
+    <main className="max-w-screen-lg mx-auto px-4 md:px-6 xl:px-0">
       <Navigation />
       <Outlet />
       <Button variant="button" onClick={useScrollToTop} className={`${scroll > 50 ? 'bottom-14' : '-bottom-24'} fixed flex justify-center items-center right-6 bg-black w-10 h-10 z-50 hover:bg-black/80`}>

@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-col justify-center items-center space-y-8 py-12">
+      <div className="flex flex-col justify-center items-center space-y-8 pt-6 pb-12 md:py-12">
         <div className="inline-flex text-[11px] bg-black/10 rounded-full p-0.5 sm:text-xs sm:p-1">
           <span className="bg-black text-white font-semibold px-2 py-1 text-center rounded-full">Revamp ✨</span>
           <p className="font-medium px-3 flex justify-center items-center">Experience a fresh look with new UI</p>
@@ -37,12 +37,12 @@ const Home = () => {
           <p>Twitteay is a simple tool for creating fake tweets. Customize text, usernames, and more for fun or creative purposes</p>
         </div>
         <div className="space-x-2">
-          <Button variant="link" to="/create" className="bg-black text-white px-6 py-2.5 hover:bg-black/80">Try now</Button>
+          <Button variant="link" to="/generate" className="bg-black text-white px-6 py-2.5 hover:bg-black/80">Try now</Button>
           <Button variant="link" to="/about" className="bg-black/10 px-6 py-2.5 hover:bg-black/15">Learn more</Button>
         </div>
       </div>
       <div className="relative">
-        <div className="absolute top-0 w-full h-1/3 bg-gradient-to-b from-white to-transparent z-50"></div>
+        <div className="absolute -top-1 w-full h-1/3 bg-gradient-to-b from-white to-transparent z-50"></div>
         <Slider {...settings}>
           {exampleTweets.map((tweet, index) => (
             <ExampleTweet 
@@ -61,9 +61,9 @@ const Home = () => {
             </ExampleTweet>
           ))}
         </Slider>
-        <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent z-50"></div>
+        <div className="absolute -bottom-1 w-full h-1/3 bg-gradient-to-t from-white to-transparent z-50"></div>
       </div>
-      <div className="py-24">
+      <div className="py-12 md:py-24">
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="inline-flex justify-center items-center gap-2 border-2 border-black py-1 px-5 rounded-full">
             <Icon className="text-sm text-black" icon="fluent:grid-24-filled" />
@@ -74,7 +74,7 @@ const Home = () => {
             <p>We provide several interesting features</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 pt-16 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-5 pt-10 sm:pt-16 md:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureDisplay key={index} title={feature.title} icon={feature.icon}>
               {feature.description}
