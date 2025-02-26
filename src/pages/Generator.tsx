@@ -31,7 +31,7 @@ const Generator = () =>  {
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1">
                 <h3 className={`font-semibold ${colorMode == 'dark' ? 'text-white' : 'text-black'}`}>{name ? name : 'Twitteay'}</h3>
-                {verified != null && (
+                {verified != 'none' && (
                   <Icon className={`text-xl ${verified == 'blue' && 'text-blue-500'} ${verified == 'gold' && 'text-yellow-500'} ${verified == 'gray' && 'text-gray-400'}`} icon="fluent-mdl2:verified-brand-solid" />
                 )}
               </div>
@@ -41,7 +41,6 @@ const Generator = () =>  {
             <div className={`flex justify-between items-center py-2 ${colorMode == 'dark' ? 'text-[#71767b]' : 'text-black/60'}`}>
               <div className="flex text-sm items-center justify-center gap-1">
                 <Icon className="text-xl" icon="fluent:chat-empty-24-regular" />
-                <p></p>
               </div>
               <div className="flex text-sm items-center justify-center gap-1">
                 <Icon className={`text-xl ${reposted && 'text-twitteay-green'}`} icon="fluent:arrow-repeat-all-24-regular" />

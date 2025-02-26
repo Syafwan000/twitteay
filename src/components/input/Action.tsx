@@ -1,18 +1,18 @@
 import Button from "@/components/input/Button"
 import html2canvas from "html2canvas"
 import download from "downloadjs"
-import { Icon } from '@iconify/react'
-import { useCallback } from "react"
 import useContentStore from "@/stores/content-store"
 import useTweetWidth from "@/hooks/use-tweet-width"
+import { Icon } from '@iconify/react'
+import { useCallback } from "react"
 
 const Action = () => {
   const { tweetWidth, resetState } = useContentStore()
   
   const handleDownload = useCallback(async () => {
     const tweetElement = document.querySelector('#tweet')
-    let fileName = 'twitteay-' + new Date().getTime() + '.png'
-    let width = useTweetWidth(tweetWidth)
+    const fileName = 'twitteay-' + new Date().getTime() + '.png'
+    const width = useTweetWidth(tweetWidth)
 
     if (tweetElement) {
       const tweet = await html2canvas(tweetElement as HTMLElement, {

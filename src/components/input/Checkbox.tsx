@@ -5,7 +5,7 @@ type CheckboxProps = {
   name: string,
   color?: string,
   checked?: boolean,
-  onClick?: (e: React.MouseEvent<HTMLInputElement>) => void
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const Checkbox = (props: CheckboxProps & PropsWithChildren) => {
@@ -28,7 +28,7 @@ const Checkbox = (props: CheckboxProps & PropsWithChildren) => {
 
   return (
     <div className="w-full">
-      <input className="peer hidden" type="checkbox" name={props.name} id={props.id} onClick={props.onClick} />
+      <input className="peer hidden" type="checkbox" name={props.name} id={props.id} onChange={props.onChange} checked={props.checked} />
       <label className={`transition-all duration-300 ease-in-out flex justify-center items-center cursor-pointer select-none font-semibold rounded-xl py-2.5 text-center peer-checked:font-bold ${colorClass}`} htmlFor={props.id}>
         {props.children}
       </label>
