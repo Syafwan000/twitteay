@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="https://github.com/Syafwan000/twitteay/blob/revamp/public/assets/favicon/android-chrome-192x192.png" alt="Twitteay Logo">
+    <img src="https://github.com/Syafwan000/twitteay/blob/revamp/public/assets/images/logo.png" alt="Twitteay Logo">
 </p>
 
 
