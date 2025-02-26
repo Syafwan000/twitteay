@@ -1,12 +1,11 @@
 
 <p align="center">
-    <img src="https://github.com/Syafwan000/twitteay/blob/revamp/public/assets/images/logo.png" alt="Twitteay Logo">
+    <img src="https://github.com/Syafwan000/twitteay/blob/main/public/assets/images/logo.png" alt="Twitteay Logo">
 </p>
-
 
 # Twitteay — Simple tool for creating fake tweets!
 
-Twitteay is a simple tool for creating fake tweets. Customize text, usernames, and more for fun or creative purposes
+Twitteay is a powerful and easy-to-use tweet generator that lets you create and customize tweets effortlessly. With real-time preview, you can see changes instantly as you tweak the text, layout, and style to match your vision.
 
 
 ## Features
