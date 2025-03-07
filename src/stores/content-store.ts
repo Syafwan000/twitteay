@@ -17,6 +17,7 @@ type State = {
   repost: string | number,
   like: string | number,
   view: string | number,
+  imageContent: string
 }
 
 type Action = {
@@ -36,6 +37,7 @@ type Action = {
   setRepost: (repost: string | number) => void,
   setLike: (like: string | number) => void,
   setView: (view: string | number) => void,
+  setImageContent: (imageContent: string) => void,
   resetState: () => void
 }
 
@@ -56,6 +58,7 @@ const initialState: State = {
   repost: '',
   like: '',
   view: '',
+  imageContent: ''
 }
 
 const useContentStore = create<State & Action>((set) => ({
@@ -75,6 +78,7 @@ const useContentStore = create<State & Action>((set) => ({
   repost: '',
   like: '',
   view: '',
+  imageContent: '',
   setProfileImage: (profileImage) => set({ profileImage }),
   setName: (name) => set({ name }),
   setUsername: (username) => set({ username }),
@@ -91,6 +95,7 @@ const useContentStore = create<State & Action>((set) => ({
   setRepost: (repost) => set({ repost }),
   setLike: (like) => set({ like }),
   setView: (view) => set({ view }),
+  setImageContent: (imageContent) => set({ imageContent }),
   resetState: () => set(initialState)
 }))
 

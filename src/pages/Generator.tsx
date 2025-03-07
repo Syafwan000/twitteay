@@ -1,16 +1,39 @@
 import useContentStore from '@/stores/content-store'
 import Toolbar from "@/components/menu/Toolbar"
-import Action from '@/components/input/Action'
+import Button from '@/components/input/Button'
 import useDateFormatter from '@/hooks/use-date-formatter'
 import useNumberFormatter from '@/hooks/use-number-formatter'
+import useTweetWidth from "@/hooks/use-tweet-width"
+import html2canvas from "html2canvas"
+import download from "downloadjs"
+import { useCallback, useRef, useState } from "react"
 import { Icon } from '@iconify/react'
 
 const Generator = () =>  {
+  const tweetElement = useRef<HTMLDivElement>(null)
+  const [loading, setLoading] = useState<boolean>(false)
   const { 
     profileImage, name, username, date, additionalYear, 
     textContent, repost, like, view, colorMode, tweetWidth, 
-    profileShape, verified, reposted, liked, viewed
+    profileShape, verified, reposted, liked, viewed,
+    imageContent, resetState
    } = useContentStore()
+
+  const handleDownload = useCallback(async () => {
+    const fileName = 'twitteay-' + new Date().getTime() + '.png'
+    const width = useTweetWidth(tweetWidth)
+    setLoading(true)
+
+    if (tweetElement.current) {
+      const tweet = await html2canvas(tweetElement.current, {
+        scale: 2,
+        windowWidth: width,
+      })
+      const dataURL = tweet.toDataURL('image/png')
+      download(dataURL, fileName, 'image/png')
+      setLoading(false)
+    }
+  }, [tweetWidth])
 
   return (
     <div className="grid grid-cols-12">
@@ -18,8 +41,23 @@ const Generator = () =>  {
         <Toolbar />
       </div>
       <div className="col-span-12 flex justify-center items-center w-full pt-28 pb-10 relative order-1 lg:p-5 lg:h-dvh lg:order-2 lg:col-span-7 2xl:col-span-8">
-        <Action />
-        <div id="tweet" className={`transition-all duration-300 ease-in-out w-full flex gap-3 p-3 ${colorMode == 'dark' ? 'bg-black' : 'bg-white'} ${tweetWidth == 'md' && 'max-w-md'} ${tweetWidth == 'lg' && 'max-w-lg'} ${tweetWidth == 'xl' && 'max-w-xl'}`}>
+        <div className="flex gap-3 absolute top-5 right-5">
+          <Button onClick={resetState} variant="button" className="flex gap-1 bg-red-600 text-white text-sm px-6 py-2 hover:bg-red-500">
+            <Icon icon="fluent:arrow-reset-24-filled" className="text-lg" />
+            Reset
+          </Button>
+          <Button onClick={handleDownload} variant="button" className="flex justify-center w-36 bg-green-600 text-white text-sm px-6 py-2 hover:bg-green-500 disabled:bg-green-300 disabled:hover:bg-green-300 disabled:cursor-not-allowed" disabled={loading}>
+            {loading ? (
+              <Icon icon="line-md:loading-twotone-loop" className="text-lg" />
+            ) : (
+              <span className="flex gap-1">
+                <Icon icon="fluent:arrow-download-24-filled" className="text-lg" />
+                Download
+            </span>
+            )}
+          </Button>
+        </div>
+        <div ref={tweetElement} className={`transition-all duration-300 ease-in-out w-full flex gap-3 p-3 ${colorMode == 'dark' ? 'bg-black' : 'bg-white'} ${tweetWidth == 'md' && 'max-w-md'} ${tweetWidth == 'lg' && 'max-w-lg'} ${tweetWidth == 'xl' && 'max-w-xl'}`}>
           <div className="flex-shrink-0">
             {profileImage ? (
               <img className={`rounded-full max-w-14 aspect-square object-cover object-center ${profileShape == 'circle' && 'rounded-full'} ${profileShape == 'rounded' && 'rounded-xl'} ${profileShape == 'square' && 'rounded-none'}`} src={profileImage} alt="Tweet Profile" />
@@ -38,6 +76,11 @@ const Generator = () =>  {
               <p className={`font-medium ${colorMode == 'dark' ? 'text-[#71767b]' : 'text-black/60'}`}>@{username ? username : 'twitteay'} · {date ? useDateFormatter(additionalYear, date) : useDateFormatter(additionalYear)}</p>
             </div>
             <p className={`${colorMode == 'dark' ? 'text-white' : 'text-black'}`}>{textContent ? textContent : 'hii!!! thank you for visiting "Twitteay" :3'}</p>
+            {imageContent && (
+              <div className="py-3">
+                <img className="w-full h-auto aspect-video object-cover object-center rounded-lg" src={imageContent} alt="Tweet Content" />
+              </div>
+            )}
             <div className={`flex justify-between items-center py-2 ${colorMode == 'dark' ? 'text-[#71767b]' : 'text-black/60'}`}>
               <div className="flex text-sm items-center justify-center gap-1">
                 <Icon className="text-xl" icon="fluent:chat-empty-24-regular" />

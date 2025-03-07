@@ -13,13 +13,13 @@ const Checkbox = (props: CheckboxProps & PropsWithChildren) => {
 
   switch (props.color) {
     case 'red':
-      colorClass = 'bg-twitteay-red/10 text-twitteay-red/50 hover:bg-twitteay-red/15 peer-checked:bg-twitteay-red peer-checked:text-white'
+      colorClass = 'bg-twitteay-red/20 text-twitteay-red/80 hover:bg-twitteay-red/15 peer-checked:bg-twitteay-red peer-checked:text-white'
       break
     case 'blue':
-      colorClass = 'bg-blue-500/10 text-blue-500/50 hover:bg-blue-500/15 peer-checked:bg-blue-500 peer-checked:text-white'
+      colorClass = 'bg-blue-500/20 text-blue-500/80 hover:bg-blue-500/15 peer-checked:bg-blue-500 peer-checked:text-white'
       break
     case 'green':
-      colorClass = 'bg-twitteay-green/10 text-twitteay-green/50 hover:bg-twitteay-green/15 peer-checked:bg-twitteay-green peer-checked:text-white'
+      colorClass = 'bg-twitteay-green/20 text-twitteay-green/80 hover:bg-twitteay-green/15 peer-checked:bg-twitteay-green peer-checked:text-white'
       break
     default:
       colorClass = 'bg-black/10 text-black/50 hover:bg-black/15 peer-checked:bg-black peer-checked:text-white'

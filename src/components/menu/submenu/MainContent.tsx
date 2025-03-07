@@ -3,6 +3,8 @@ import Inputfield from "@/components/input/Inputfield"
 import Textarea from "@/components/input/Textarea"
 import Filepond from "@/components/input/Filepond"
 import Checkbox from '@/components/input/Checkbox'
+import SubmenuLayout from '@/components/layout/SubmenuLayout'
+import InputWrapper from '@/components/display/InputWrapper'
 
 const MainContent = () => {
   const { 
@@ -13,67 +15,88 @@ const MainContent = () => {
   } = useContentStore()
 
   return (
-    <div className="flex flex-col gap-5 w-full h-full">
-      <div className="bg-black/15 space-y-px p-6 rounded-xl">
-        <h3 className="text-xl font-bold">Main Content</h3>
-        <p>Provides featute to manage and edit the primary content of your fake tweet</p>
-      </div>
-      <div className="space-y-3 p-2 overflow-y-auto">
-        <Filepond 
-          name="Profile Image"
-          value={profileImage}
-          stateHandler={setProfileImage} />
-        <Inputfield 
-          name="Name" 
-          type="text"
-          value={name}
-          placeholder="e.g. Twitteay"
-          onChange={(e) => setName(e.target.value)} />
-        <Inputfield 
-          name="Username" 
-          type="text"
-          value={username}
-          placeholder="e.g. twitteay"
-          onChange={(e) => setUsername(e.target.value)} />
+    <SubmenuLayout
+      title="Main Content"
+      description="Provides featute to manage and edit the primary content of your fake tweet">
+        <InputWrapper
+          label="Profile Image"
+          id="profile-image">
+            <Filepond 
+              name="Profile Image"
+              value={profileImage}
+              stateHandler={setProfileImage} />
+        </InputWrapper>
+        <InputWrapper
+          label="Name"
+          id="name">
+            <Inputfield 
+              type="text"
+              value={name}
+              placeholder="e.g. Twitteay"
+              onChange={(e) => setName(e.target.value)} />
+        </InputWrapper>
+        <InputWrapper
+          label="Username"
+          id="username">
+            <Inputfield 
+              type="text"
+              value={username}
+              placeholder="e.g. twitteay"
+              onChange={(e) => setUsername(e.target.value)} />
+        </InputWrapper>
         <div className="space-y-3">
-          <Inputfield 
-            name="Date" 
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)} />
+          <InputWrapper
+            label="Date"
+            id="date">
+              <Inputfield 
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)} />
+          </InputWrapper>
           <Checkbox 
-            name="additionalYear" 
-            id="additionalYear" 
+            name="additional-year" 
+            id="additional-year" 
             checked={additionalYear}
             onChange={(e) => setAdditionalYear((e.target as HTMLInputElement).checked) }>
             Add Year
           </Checkbox>
         </div>
-        <Textarea
-          name="Text Content"
-          value={textContent}
-          placeholder="e.g. hii!!! thank you for visiting 'Twitteay' :3"
-          onChange={(e) => setTextContent(e.target.value)} />
-        <Inputfield 
-          name="Reposts" 
-          type="number"
-          value={repost}
-          placeholder="e.g. 100"
-          onChange={(e) => setRepost(e.target.value)} />
-        <Inputfield 
-          name="Likes" 
-          type="number"
-          value={like}
-          placeholder="e.g. 100"
-          onChange={(e) => setLike(e.target.value)} />
-        <Inputfield 
-          name="Views" 
-          type="number"
-          value={view}
-          placeholder="e.g. 100"
-          onChange={(e) => setView(e.target.value)} />
-      </div>
-    </div>
+        <InputWrapper
+          label="Text Content"
+          id="text-content">
+            <Textarea
+              value={textContent}
+              placeholder="e.g. hii!!! thank you for visiting 'Twitteay' :3"
+              onChange={(e) => setTextContent(e.target.value)} />
+        </InputWrapper>
+        <InputWrapper
+          label="Reposts"
+          id="reposts">
+            <Inputfield 
+              type="number"
+              value={repost}
+              placeholder="e.g. 100"
+              onChange={(e) => setRepost(e.target.value)} />
+        </InputWrapper>
+        <InputWrapper
+          label="Likes"
+          id="likes">
+            <Inputfield 
+              type="number"
+              value={like}
+              placeholder="e.g. 100"
+              onChange={(e) => setLike(e.target.value)} />
+        </InputWrapper>
+        <InputWrapper
+          label="Views"
+          id="views">
+            <Inputfield 
+              type="number"
+              value={view}
+              placeholder="e.g. 100"
+              onChange={(e) => setView(e.target.value)} />
+        </InputWrapper>
+    </SubmenuLayout>
   )
 }
 

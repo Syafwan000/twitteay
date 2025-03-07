@@ -9,32 +9,32 @@ const Toolbar = () => {
   const [menu, setMenu] = useState<number>(1)
 
   return (
-    <div className="w-full h-dvh p-5">
-      <div className="flex flex-col h-full gap-5 lg:flex-row">
-        <div className="flex flex-row justify-between lg:flex-col">
+    <div className="w-full h-max lg:p-5 lg:h-dvh">
+      <div className="flex flex-col h-full gap-3 lg:gap-5 lg:flex-row">
+        <div className="flex flex-row justify-between px-3 lg:px-0 lg:flex-col">
           <div className="relative flex flex-row gap-3 z-50 lg:flex-col">
-            <Button onClick={() => setMenu(1)} tooltipID="menu-1" tooltipContent="Main Content" tooltipPlace="right" variant="button" className={`${menu == 1 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
+            <Button onClick={() => setMenu(1)} variant="button" className={`${menu == 1 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
               <Icon className="text-4xl" icon="fluent:content-view-24-filled" />
             </Button>
-            <Button onClick={() => setMenu(2)} tooltipID="menu-2" tooltipContent="Appearance & Attributes" tooltipPlace="right" variant="button" className={`${menu == 2 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
+            <Button onClick={() => setMenu(2)} variant="button" className={`${menu == 2 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
               <Icon className="text-4xl" icon="fluent:color-line-24-filled" />
             </Button>
-            <Button onClick={() => setMenu(3)} tooltipID="menu-3" tooltipContent="Additional Content" tooltipPlace="right" variant="button" className={`${menu == 3 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
+            <Button onClick={() => setMenu(3)} variant="button" className={`${menu == 3 ? 'bg-black text-white before:h-full' : 'bg-[#e5e5e5] text-black before:h-3 hover:bg-[#d9d9d9] hover:before:h-8'} w-12 h-12 flex justify-center items-center p-2.5 relative before:hidden before:transition-all before:duration-300 before:ease-in-out before:absolute before:-left-16 before:w-12 before:bg-black before:rounded-xl lg:before:block`}>
               <Icon className="text-4xl" icon="fluent:image-24-filled" />
             </Button>
           </div>
-          <Button tooltipID="back-to-home" tooltipContent="Return to home" tooltipPlace="right" variant="link" to="/" className="w-12 h-12 bg-black flex justify-center items-center p-2.5 z-50 hover:bg-black/80">
+          <Button variant="link" to="/" className="w-12 h-12 bg-black flex justify-center items-center p-2.5 z-50 hover:bg-black/80">
             <Icon className="text-4xl text-white" icon="fluent:home-24-filled" />
           </Button>
         </div>
-        <div className="relative w-full h-full">
-          <div className={`${menu == 1 ? 'left-0 opacity-100' : '-left-[120%] opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-full rounded-2xl p-5`}>
+        <div className="w-full h-full lg:relative">
+          <div className={`${menu == 1 ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-auto px-3 py-5 rounded-t-3xl md:px-4 lg:h-full lg:rounded-2xl lg:p-5`}>
             <MainContent />
           </div>
-          <div className={`${menu == 2 ? 'left-0 opacity-100' : '-left-[120%] opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-full rounded-2xl p-5`}>
+          <div className={`${menu == 2 ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-auto px-3 py-5 rounded-t-3xl md:px-4 lg:h-full lg:rounded-2xl lg:p-5`}>
             <Appearance />
           </div>
-          <div className={`${menu == 3 ? 'left-0 opacity-100' : '-left-[120%] opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-full rounded-2xl p-5`}>
+          <div className={`${menu == 3 ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} absolute transition-all duration-1000 ease-in-out bg-black/10 w-full h-auto px-3 py-5 rounded-t-3xl md:px-4 lg:h-full lg:rounded-2xl lg:p-5`}>
             <AdditionalContent />
           </div>
         </div>

@@ -21,7 +21,6 @@
     "react-dom": "^18.3.1",
     "react-filepond": "^7.1.2",
     "react-slick": "^0.30.2",
-    "react-tooltip": "^5.27.1",
     "slick-carousel": "^1.8.1",
     "zustand": "^4.5.4"
   },
