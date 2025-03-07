@@ -46,9 +46,9 @@ const Generator = () =>  {
             <Icon icon="fluent:arrow-reset-24-filled" className="text-lg" />
             Reset
           </Button>
-          <Button onClick={handleDownload} variant="button" className="flex justify-center w-36 bg-green-600 text-white text-sm px-6 py-2 hover:bg-green-500 disabled:bg-green-300 disabled:hover:bg-green-300 disabled:cursor-not-allowed" disabled={loading}>
+          <Button onClick={handleDownload} variant="button" className="flex justify-center w-36 bg-green-600 text-white text-sm px-6 py-2 hover:bg-green-500 disabled:bg-green-600/30 disabled:hover:bg-green-500/30 disabled:cursor-not-allowed" disabled={loading}>
             {loading ? (
-              <Icon icon="line-md:loading-twotone-loop" className="text-lg" />
+              <Icon icon="line-md:loading-twotone-loop" className="text-xl" />
             ) : (
               <span className="flex gap-1">
                 <Icon icon="fluent:arrow-download-24-filled" className="text-lg" />
