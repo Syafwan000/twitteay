@@ -45,4 +45,4 @@ Twitteay is a powerful and easy-to-use tweet generator that lets you create and 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/Syafwan000/twitteay/blob/revamp/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Syafwan000/twitteay/blob/main/LICENSE) file for details.
