@@ -37,7 +37,7 @@ Twitteay is a powerful and easy-to-use tweet generator that lets you create and 
       npm install
     ```
 
-7. Start the server
+4. Start the server
 
     ```bash
       npm run dev
